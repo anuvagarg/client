@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #040404;
+  color: aliceblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Nav */
+
+li.nav-item {
+  display: grid;
+}
+
+.navbar .collapse .navbar-nav li.nav-item a.nav-link {
+  display: grid !important;
+  justify-content: flex-end;
+}
+
+/* End Nav */
+
+/* Welcome */
+
+/* Default margin for the heading */
+.home {
+  margin-top: 40px;
+  padding: 10px;
+  /* Adjust as needed */
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .home {
+    margin-top: 50px;
+    padding: 10px;
+    /* Adjust as needed */
+  }
+}
+
+/* Extra-large screens */
+@media (min-width: 1200px) {
+  .home {
+    margin-top: 60px;
+    padding: 10px;
+    /* Adjust as needed */
+  }
+}
+
+/* Login */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  /* Full viewport height to center vertically */
+  text-align: center;
+}
+
+.login button {
+  width: 100%;
+}
+
+.login h6 {
+  padding-top: 20px;
+}
+
+/* End Login */
+
+
+
+
+
+
+
+
+/* client/src/components/Chat/Chat.css */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack elements vertically */
+  height: 100vh;
+  /* Full height */
+  background-color: #f0f0f0;
+  /* Light background */
+  color: #333;
+  /* Dark text */
+  position: relative;
+  /* For positioning elements */
+  padding-top: 100px;
+}
+
+.hamburger {
+  position: fixed;
+  /* Fix position */
+  top: 10px;
+  /* Padding from top */
+  left: 10px;
+  /* Padding from left */
+  background: none;
+  /* No background */
+  border: none;
+  /* No border */
+  font-size: 24px;
+  /* Large icon */
+  cursor: pointer;
+  /* Pointer cursor */
+  z-index: 1000;
+  /* Above other content */
+}
+
+.session-list {
+  position: fixed;
+  /* Keep it fixed on the left */
+  top: 50px;
+  /* Position below the hamburger */
+  left: 10px;
+  /* Align with left */
+  background-color: #fff;
+  /* White background for sessions */
+  border: 1px solid #ddd;
+  /* Light border */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Padding */
+  z-index: 999;
+  /* Above other content */
+  width: 200px;
+  /* Width for the session list */
+}
+
+.create-chat-btn {
+  margin-bottom: 10px;
+  /* Space below the button */
+  width: 100%;
+  /* Full width */
+}
+
+.session-item {
+  padding: 10px;
+  /* Padding for session items */
+  cursor: pointer;
+  /* Pointer cursor for items */
+}
+
+.session-item:hover {
+  background-color: #f0f0f0;
+  /* Highlight on hover */
+}
+
+.session-item.active {
+  font-weight: bold;
+  /* Bold for active session */
+}
+
+.chat-box {
+  flex-grow: 1;
+  /* Allow chat box to grow */
+  display: flex;
+  flex-direction: column;
+  /* Stack messages and input vertically */
+  justify-content: flex-end;
+  /* Align to the bottom */
+  margin-left: 10px;
+  /* Leave space for the hamburger */
+}
+
+.chat-messages {
+  overflow-y: auto;
+  /* Scroll for long messages */
+  border: 1px solid #ddd;
+  /* Light border */
+  padding: 15px;
+  /* Padding */
+  margin-bottom: 15px;
+  /* Space between messages and input */
+  border-radius: 5px;
+  /* Rounded corners */
+  background-color: #f8f9fa;
+  /* Light gray background for messages */
+  width: 100%;
+  /* Full width */
+  height: 50vh;
+}
+
+.chat-message {
+  padding: 10px;
+  /* Padding for messages */
+  border-bottom: 1px solid #eee;
+  /* Light border for messages */
+}
+
+.input-group {
+  display: flex;
+  flex-shrink: 0;
+  /* Prevent shrinking */
+}
+
+.input-group .form-control {
+  height: 50px;
+  /* Height for input */
+  font-size: 16px;
+  /* Font size for input */
+  width: 100%;
+  /* Full width */
+}
+
+.input-group .btn-primary {
+  height: 50px;
+  /* Match button height to input */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+    /* Stack vertically on mobile */
+  }
+
+  .chat-box {
+    width: 100%;
+    /* Full width */
+  }
+}
