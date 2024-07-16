@@ -1,19 +1,30 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Logout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Clear user data from local storage
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-    
-    // Optionally, clear cookies or other storage methods if used
-    document.cookie = 'token=; Max-Age=0; path=/; domain=master--ditto-client.netlify.app;';
+    const performLogout = async () => {
+      try {
+        // Call the Strapi logout API
+        await axios.post('https://young-virtue-d178786b6e.strapiapp.com/api/logout', {}, {
+          withCredentials: true, // Include cookies in the request if needed
+        });
 
-    // Redirect to the login page
-    navigate("/login");
+        // Clear user data from local storage
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+
+        // Redirect to the login page
+        navigate("/login");
+      } catch (error) {
+        console.error("Error logging out:", error);
+      }
+    };
+
+    performLogout();
   }, [navigate]);
 
   return null;
