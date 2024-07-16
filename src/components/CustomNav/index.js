@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -28,11 +27,9 @@ const CustomNav = () => {
               <NavLink href="/components/">Components</NavLink>
             </NavItem> */}
             <NavItem>
-              <Link to="/login">
-              <NavLink>
+              <NavLink href="/logout">
                 Logout
               </NavLink>
-              </Link>
             </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
