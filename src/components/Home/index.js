@@ -1,6 +1,7 @@
 import React from "react";
 import CustomNav from "../CustomNav";
 import { userData } from "../../helpers";
+import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 
 const Home = () => {
@@ -10,7 +11,9 @@ const Home = () => {
       <CustomNav />
       <div className="home">
         <h2>Welcome, {username}!</h2>
-        <Button className="chat-hm-btn">Start Chat</Button>
+        <Link to="/chat">
+          <Button color="primary">Start Ditto</Button>
+        </Link>
       </div>
     </div>
   );
