@@ -27,7 +27,7 @@ const CustomNav = () => {
               <NavLink href="/components/">Components</NavLink>
             </NavItem> */}
             <NavItem>
-              <NavLink href="/logout">
+              <NavLink href="/login">
                 Logout
               </NavLink>
             </NavItem>
