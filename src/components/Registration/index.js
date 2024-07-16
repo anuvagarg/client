@@ -11,7 +11,7 @@ const Registration = () => {
 
   const signUp = async () => {
     try {
-      const url = `http://localhost:1337/api/auth/local/register`;
+      const url = `https://young-virtue-d178786b6e.strapiapp.com/api/auth/local/register`;
       if (user.username && user.email && user.password) {
         const res = await axios.post(url, user);
         if (!!res) {
