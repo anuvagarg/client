@@ -31,7 +31,7 @@ li.nav-item {
 
 /* Default margin for the heading */
 .home {
-  margin-top: 40px;
+  margin-top: 60px;
   padding: 10px;
   /* Adjust as needed */
 }
@@ -39,7 +39,7 @@ li.nav-item {
 /* Larger screens */
 @media (min-width: 768px) {
   .home {
-    margin-top: 50px;
+    margin-top: 80px;
     padding: 10px;
     /* Adjust as needed */
   }
@@ -48,7 +48,7 @@ li.nav-item {
 /* Extra-large screens */
 @media (min-width: 1200px) {
   .home {
-    margin-top: 60px;
+    margin-top: 80px;
     padding: 10px;
     /* Adjust as needed */
   }
